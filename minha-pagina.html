@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="pt-BR">
+    <meta name="google" content="notranslate">
+    <title>Minha Página</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var dateEl = document.getElementById('urgency-date');
+          if (dateEl) {
+            var now = new Date();
+            var day = now.getDate();
+            var month = now.getMonth() + 1;
+            var year = now.getFullYear();
+            dateEl.textContent = day + '/' + month + '/' + year;
+          }
+        });
+      </script>
+    <script>
+      (function() {
+        var names = ["Letícia","Maria","Ana","Juliana","Fernanda","Camila","Beatriz","Larissa","Amanda","Gabriela","Mariana","Carolina","Rafaela","Patrícia","Bruna","Lucas","Pedro","João","Gabriel","Rafael","Bruno","Carlos","Matheus","Felipe","Gustavo","Ricardo","André","Marcelo","Thiago","Leonardo"];
+        var productName = "Fala Gringo - Aprenda Inglês";
+        var interval = 12 * 1000;
+        
+        function getRandomName() {
+          return names[Math.floor(Math.random() * names.length)];
+        }
+        
+        function showNotification() {
+          var existing = document.getElementById('fake-purchase-notification');
+          if (existing) existing.remove();
+          
+          var notification = document.createElement('div');
+          notification.id = 'fake-purchase-notification';
+          notification.innerHTML = '<div style="width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:18px;">✓</div><div><div style="font-weight:600;font-size:14px;">' + getRandomName() + ' acabou de comprar</div><div style="font-size:12px;opacity:0.8;">' + productName + '</div></div>';
+          notification.style.cssText = 'position:fixed;bottom:20px;left:20px;background-color:#22c55e;color:#ffffff;padding:12px 20px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:9998;display:flex;align-items:center;gap:12px;animation:slideInLeft 0.4s ease-out;max-width:300px;';
+          document.body.appendChild(notification);
+          
+          setTimeout(function() {
+            if (notification.parentNode) notification.remove();
+          }, 4000);
+        }
+        
+        setTimeout(showNotification, 3000);
+        setInterval(showNotification, interval);
+      })();
+    </script>
+    <style>
+      @keyframes slideInLeft {
+        from { transform: translateX(-100%); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: clip;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #ffffff;
+            min-height: 100vh;
+            padding: 0;
+            overflow-x: clip;
+            width: 100%;
+            max-width: 100vw;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 0px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+        }
+        
+        .content > :not(.section) {
+            margin-bottom: 16px;
+        }
+        
+        .content > :not(.section):last-child {
+            margin-bottom: 0;
+        }
+        
+        .content > .section {
+            margin-bottom: 0;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        @keyframes pulseBtn {
+            0%, 100% {
+                transform: scale(1);
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        @keyframes shakeBtn {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
+            20%, 40%, 60%, 80% { transform: translateX(2px); }
+            95% { transform: translateX(0); }
+        }
+        
+        @keyframes glowBtn {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px currentColor, 0 4px 14px rgba(0, 0, 0, 0.2);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 0px;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div style="margin: calc(-1 * 20px) calc(-1 * 20px) 0; width: calc(100% + 2 * 20px); background-color:#f60404;color:#ffffff;padding:10px 20px;text-align:center;font-weight:600;font-size:14px;display:flex;justify-content:center;align-items:center;gap:8px;font-family:Arial,sans-serif;">
+              <span><span style="color:#ffff00">⚡</span> Desconto só <span style="color:#ffff00;font-weight:700">HOJE</span> nessa página <span id="urgency-date" style="color:#ffff00;font-weight:700"></span></span>
+            </div>
+        <div class="content">
+        <div class="section" style="position: relative; background-color: #ffffff; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #1a1a1a; font-size: 28px; font-weight: 700; text-align: center; padding: 12px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0s; opacity: 0;"><span style="color: #1e3a8a;">Apenas </span>
+  <span style="color: #facc15;">7 Dias</span>
+  <span style="color: #1e3a8a;"> e Mais Nada e Você Já Entende Inglês!
+</span></h2>
+<p style="color: #4a4a4a; font-size: 18px; font-weight: 600; text-align: center; padding: 10px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.1s; opacity: 0;">🤡 Não caia no golpe das escolas de inglês e não pague por curso, apenas decore essas palavras!</p>
+<div style="display: flex; justify-content: center; margin-top: 0px; margin-bottom: 0px;"><img src="https://i.ibb.co/5Wz5SV83/sem-fundo.png" alt="Imagem" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;  " /></div>
+<div style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
+        <a href="#oferta"  onclick="event.preventDefault(); var target = document.getElementById('oferta'); if(target) target.scrollIntoView({behavior: 'smooth', block: 'start'});" style="background-color: #22c55e; color: #ffffff; font-size: 18px; font-weight: 700; text-align: center; padding: 18px 48px; border-radius: 12px; animation: pulseBtn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; display: inline-block; text-decoration: none; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">QUERO APRENDER INGLÊS!</a>
+      </div></div></div>
+        <div class="section" style="position: relative; background-color: #f8f8f8; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="display: flex; justify-content: center; margin-top: 0px; margin-bottom: 0px;"><img src="https://i.ibb.co/Fq7SDcdH/Voc-sabia-que-em-qualquer-idioma-a-maior-parte-das-conversas-acontece-com-um-n-mero-pequeno-de-pal.png" alt="Imagem" style="width: 110%; height: auto; border-radius: 24px; object-fit: cover;  " /></div></div></div>
+        <div class="section" style="position: relative; background-color: #f8f9fa; padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 16px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #1a1a2e; font-size: 24px; font-weight: 700; text-align: center; padding: 10px;">📦 O QUE VOCÊ VAI RECEBER AO COMPRAR O FALA GRINGO</h2>
+<div style="height: 20px;"></div>
+<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
+        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">📱 Acesso ao Aplicativo Fala Gringo</h3>
+        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Tenha acesso imediato ao app com as 1000 palavras mais usadas do inglês, organizadas de forma simples para facilitar o aprendizado, mesmo para iniciantes.</p>
+      </div>
+<div style="height: 20px;"></div>
+<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
+        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">🎧 Áudio de Todas as Palavras (Audiobook)</h3>
+        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Cada palavra vem com áudio de pronúncia, para você ouvir e repetir onde estiver: no celular, no carro ou em casa.</p>
+      </div>
+<div style="height: 20px;"></div>
+<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
+        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">🔤 Tradução Simples e Direta</h3>
+        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Você aprende a palavra em inglês, vê a tradução em português e entende exatamente como ela é usada no dia a dia.</p>
+      </div>
+<div style="height: 20px;"></div>
+<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
+        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">⚡ Acesso Imediato e Vitalício</h3>
+        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Comprou, acessou.
+O conteúdo é seu para sempre, sem mensalidade, sem renovação e sem limite de uso.</p>
+      </div>
+<p style="color: #4a4a6a; font-size: 16px; font-weight: 400; text-align: center; padding: 10px;">E muito mais..</p></div></div>
+        <div class="section" style="position: relative; background-color: #f8f9fa; padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 16px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="height: 60px;"></div>
+<h2 style="color: #1a1a2e; font-size: 24px; font-weight: 700; text-align: center; padding: 0px;">Mais de 500 pessoas comuns já testaram e aprovaram!</h2>
+<p style="color: #4a4a6a; font-size: 16px; font-weight: 400; text-align: center; padding: 9px;">⭐⭐⭐⭐⭐ Avaliação Média: 4,9/5 + de 500 alunos satisfeitos!</p></div></div>
+        <div class="section" style="position: relative; background-color: #f8f9fa; padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 16px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="display: flex; justify-content: center;">
+        <div style="position: relative; overflow: hidden; width: 80%; max-width: 80%; border-radius: 8px; ">
+          <div id="carousel_vwna2vjc1" style="display: flex; transition: transform 0.5s ease-out;">
+            
+        <img src="https://i.ibb.co/7L7Q09J/1.jpg" alt="Slide 1" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
+      
+        <img src="https://i.ibb.co/V00VGFh9/2.jpg" alt="Slide 2" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
+      
+        <img src="https://i.ibb.co/qFR6kc69/3.jpg" alt="Slide 3" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
+      
+        <img src="https://i.ibb.co/NnTG1pmx/4.jpg" alt="Slide 4" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
+      
+        <img src="https://i.ibb.co/7xtCvLhm/5.jpg" alt="Slide 5" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
+      
+          </div>
+          <button onclick="(function(){var c=document.getElementById('carousel_vwna2vjc1');var i=parseInt(c.dataset.index||0);var t=5;i=(i-1+t)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;})();" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background-color: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button onclick="(function(){var c=document.getElementById('carousel_vwna2vjc1');var i=parseInt(c.dataset.index||0);var t=5;i=(i+1)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;})();" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background-color: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+          <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span>
+          </div>
+          <script>(function(){var c=document.getElementById('carousel_vwna2vjc1');var i=0;var t=5;setInterval(function(){i=(i+1)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;},6000);})();</script>
+        </div>
+      </div></div></div>
+        <div class="section" style="position: relative; background-color: #f0f9f4; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div id="oferta" style="height: 0; overflow: hidden;"></div>
+<div style="background-color: #ffffff; color: #1a1a1a; text-align: center; padding: 32px; border-radius: 16px; border-color: #22c55e; border-width: 3px; border-style: solid; animation: pulseBtn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+          <div style="margin-bottom: 20px;"><img src="https://i.imgur.com/dfuHm38.png" alt="COMPRE AGORA E TENHA ACESSO IMEDIATO" style="width: 100%; max-width: 250px; height: auto; border-radius: 12px; margin: 0 auto; display: block;" /></div>
+          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #1a1a1a;">COMPRE AGORA E TENHA ACESSO IMEDIATO</h3>
+          <p style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Sem mensalidades, nem assinaturas, nem pegadinhas...</p>
+          <p style="font-size: 20px; text-decoration: line-through; opacity: 0.5; margin-bottom: 4px;">R$ 67,90</p>
+          <div style="margin-bottom: 24px;">
+            <span style="font-size: 48px; font-weight: 800; color: #22c55e; line-height: 1;">R$ 19,90</span>
+          </div>
+          <div style="height: 1px; background-color: #22c55e; margin: 0 -16px 24px;"></div>
+          <div style="text-align: left; margin-bottom: 24px;">
+            
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;"> Guia 1000 Palavras</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;"> Audiobook 1000 Palavras
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;"> Tradução e Pronúncia
+</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Acesso Imediato</span>
+        </div>
+      
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <span style="font-size: 15px; line-height: 1.5;">Acesso Vitalício</span>
+        </div>
+      
+          </div>
+          <a href="https://pay.lowify.com.br/checkout?product_id=PdyvLK" target="_blank" rel="noopener noreferrer"  style="display: block; width: 100%; padding: 16px 24px; background-color: #22c55e; color: #ffffff; font-size: 16px; font-weight: 600; text-align: center; border-radius: 12px; text-decoration: none; box-shadow: 0 4px 14px #22c55e40; animation: pulseBtn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">👉 Comprar agora</a>
+        </div>
+<div style="height: 60px;"></div>
+<div style="display: flex; justify-content: center;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 12px; background-color: #ffffff; color: #1a1a2e; padding: 16px 24px; border-radius: 12px; border: 2px solid #25D366; animation: fadeIn 0.6s ease-out forwards;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px; flex-shrink: 0;" />
+          <span style="font-size: 14px; font-weight: 500;">Após a compra, você recebe acesso ao Material completo diretamente no seu WhatsApp</span>
+        </div>
+      </div></div></div>
+        <div class="section" style="position: relative; background-color: #ffffff; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="background-color: #ffffff; padding: 32px; border-radius: 16px; text-align: center; ">
+        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #22c55e20, #22c55e40); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            <polyline points="9 12 11 14 15 10" stroke="#22c55e" stroke-width="2"></polyline>
+          </svg>
+        </div>
+        <h3 style="font-size: 24px; font-weight: 700; color: #1a1a2e; margin-bottom: 16px;">Garantia de Satisfação</h3>
+        <p style="font-size: 14px; color: #1a1a2e; opacity: 0.8; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">Se você não ficar satisfeito, devolvemos seu dinheiro.</p>
+        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+          
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="font-size: 14px; color: #1a1a2e;">Sem burocracia</span>
+        </div>
+      
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <span style="font-size: 14px; color: #1a1a2e;">Reembolso total</span>
+        </div>
+      
+        </div>
+      </div>
+<div style="height: 60px;"></div>
+<div style="background-color: #f8f8f8; padding: 24px; border-radius: 16px; animation: fadeIn 0.6s ease-out forwards;">
+        <h3 style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 24px; text-align: center;">Perguntas Frequentes</h3>
+        
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_n9adlf4xr_0');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_n9adlf4xr_icon_0');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Como vou receber o material?</span>
+            <svg id="faq_n9adlf4xr_icon_0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_n9adlf4xr_0" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Após a confirmação do pagamento, você receberá o material em PDF diretamente no seu WhatsApp e e-mail.</p>
+          </div>
+        </div>
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_n9adlf4xr_1');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_n9adlf4xr_icon_1');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">São quantas palavras?</span>
+            <svg id="faq_n9adlf4xr_icon_1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_n9adlf4xr_1" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">São 1000 palavras em inglês, escolhidas por serem as mais usadas no inglês do dia a dia, cada uma com tradução e áudio para ouvir e repetir</p>
+          </div>
+        </div>
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_n9adlf4xr_2');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_n9adlf4xr_icon_2');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Funciona para qualquer pessoa?</span>
+            <svg id="faq_n9adlf4xr_icon_2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_n9adlf4xr_2" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Sim. Funciona para qualquer pessoa, inclusive iniciantes e quem já tentou aprender inglês antes e não conseguiu.</p>
+          </div>
+        </div>
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_n9adlf4xr_3');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_n9adlf4xr_icon_3');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Quais formas de pagamento são aceitas?</span>
+            <svg id="faq_n9adlf4xr_icon_3" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_n9adlf4xr_3" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Aceitamos PIX e cartão de crédito.</p>
+          </div>
+        </div>
+      
+        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
+          <button onclick="(function(){var c=document.getElementById('faq_n9adlf4xr_4');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_n9adlf4xr_icon_4');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
+            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Tem garantia?</span>
+            <svg id="faq_n9adlf4xr_icon_4" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div id="faq_n9adlf4xr_4" style="display: none; padding: 0 0 20px 0;">
+            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Sim! Oferecemos garantia de 7 dias. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</p>
+          </div>
+        </div>
+      
+      </div></div></div>
+        <div class="section" style="position: relative; background-color: #f8f8f8; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><p style="color: #1a1a1a; font-size: 18px; font-weight: 700; text-align: center; padding: 0 0 8px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.7000000000000001s; opacity: 0;">📩 Precisa de Ajuda?</p>
+<div style="padding: 16px; text-align: center; "><div style="display: flex; align-items: center; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://www.instagram.com/fala.gringoofc" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; border-radius: 50%; background-color: #E4405F; border: none; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/instagram.svg" alt="instagram" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
+        </a>
+      </div></div>
+<p style="color: #4a4a4a; font-size: 14px; font-weight: 400; text-align: center; padding: 0 0 24px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.9s; opacity: 0;">Envie um e-mail para contatosuportoficial@gmail.com e nossa equipe responderá rapidamente para ajudá-lo com qualquer dúvida ou problema.</p>
+<p style="color: #888888; font-size: 12px; font-weight: 400; text-align: center; padding: 0; animation: fadeIn 0.6s ease-out forwards; animation-delay: 1s; opacity: 0;">No Fala Gringo, desenvolvemos um método simples e direto para ajudar pessoas comuns a entender inglês de forma prática e sem complicação.
+Nosso compromisso é ensinar apenas o que realmente importa no inglês do dia a dia, usando palavras e áudios que facilitam o aprendizado, mesmo para quem nunca conseguiu aprender antes.</p></div></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>
