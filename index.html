@@ -1,459 +1,414 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Language" content="pt-BR">
     <meta name="google" content="notranslate">
-    <title>Minha Página</title>
-    <!-- BUILD_EASY_DATA:eyJlbGVtZW50cyI6W3siaWQiOiJlbF8xNzY2OTY3NjQwMTE0XzdlYmFiZmtjNiIsInR5cGUiOiJzZWN0aW9uIiwic3R5bGVzIjp7ImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiIsImNoaWxkcmVuIjpbeyJpZCI6ImVsXzE3NjY5Njc2NDAxMTRfbGV4bzF5NzgxIiwidHlwZSI6ImhlYWRpbmciLCJzdHlsZXMiOnsicGFkZGluZyI6IjEycHgiLCJmb250U2l6ZSI6IjI4cHgiLCJhbmltYXRpb24iOiJmYWRlLWluIiwidGV4dEFsaWduIjoiY2VudGVyIiwidGV4dENvbG9yIjoiIzFhMWExYSIsImZvbnRXZWlnaHQiOiI3MDAifSwiY29udGVudCI6Iltjb3I6IzFlM2E4YV1BcGVuYXMgWy9jb3JdXG4gIFtjb3I6I2ZhY2MxNV03IERpYXNbL2Nvcl1cbiAgW2NvcjojMWUzYThhXSBlIE1haXMgTmFkYSBlIFZvY8OqIErDoSBFbnRlbmRlIEluZ2zDqnMhXG5bL2Nvcl0ifSx7ImlkIjoiZWxfMTc2Njk2NzY0MDExNF95ajVyOGNsbTQiLCJ0eXBlIjoidGV4dCIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMTBweCIsImZvbnRTaXplIjoiMThweCIsImFuaW1hdGlvbiI6ImZhZGUtaW4iLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJ0ZXh0Q29sb3IiOiIjNGE0YTRhIiwiZm9udFdlaWdodCI6IjYwMCJ9LCJjb250ZW50Ijoi8J+koSBOw6NvIGNhaWEgbm8gZ29scGUgZGFzIGVzY29sYXMgZGUgaW5nbMOqcyBlIG7Do28gcGFndWUgcG9yIGN1cnNvLCBhcGVuYXMgZGVjb3JlIGVzc2FzIHBhbGF2cmFzISJ9LHsiaWQiOiJlbF8xNzY2OTY3OTcwNDc5Xzl0Z28xaDQwayIsInNyYyI6Imh0dHBzOi8vaS5pYmIuY28vNVd6NVNWODMvc2VtLWZ1bmRvLnBuZyIsInR5cGUiOiJpbWFnZSIsInN0eWxlcyI6eyJ3aWR0aCI6IjEwMCUiLCJoZWlnaHQiOiJhdXRvIiwiYW5pbWF0aW9uIjoibm9uZSIsImJvcmRlclJhZGl1cyI6IjhweCJ9LCJjb250ZW50IjoiIiwiaW1hZ2VHcmlkRGF0YSI6eyJpbWFnZXMiOlsiaHR0cHM6Ly9pLmliYi5jby9aem1QV2ZzSi9DaGF0LUdQVC1JbWFnZS0yMS1kZS1kZXotZGUtMjAyNS0yMS0wNS0wMC1yZW1vdmViZy1wcmV2aWV3LnBuZyJdLCJlbmFibGVkIjpmYWxzZX19LHsiaWQiOiJlbF8xNzY2OTY3NjQwMTE0X25xc25kam1scCIsImhyZWYiOiIjb2ZlcnRhIiwidHlwZSI6ImJ1dHRvbiIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMThweCA0OHB4IiwiZm9udFNpemUiOiIxOHB4IiwiYW5pbWF0aW9uIjoicHVsc2UiLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJ0ZXh0Q29sb3IiOiIjZmZmZmZmIiwiZm9udFdlaWdodCI6IjcwMCIsImJvcmRlclJhZGl1cyI6IjEycHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjMjJjNTVlIn0sImNvbnRlbnQiOiJRVUVSTyBBUFJFTkRFUiBJTkdMw4pTISJ9XSwic2VjdGlvbkRhdGEiOnsicGFkZGluZ1RvcCI6IjQwcHgiLCJwYWRkaW5nTGVmdCI6IjIwcHgiLCJwYWRkaW5nUmlnaHQiOiIyMHB4IiwicGFkZGluZ0JvdHRvbSI6IjQwcHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIn19LHsiaWQiOiJlbF8xNzY2OTY3NjQwMTE0X25jMm1vNDNoNSIsInR5cGUiOiJzZWN0aW9uIiwic3R5bGVzIjp7ImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiIsImNoaWxkcmVuIjpbeyJpZCI6ImVsXzE3NjY5NzEyNDYzMTRfemViZXJpYjF2Iiwic3JjIjoiaHR0cHM6Ly9pLmliYi5jby9GcTdTRGNkSC9Wb2Mtc2FiaWEtcXVlLWVtLXF1YWxxdWVyLWlkaW9tYS1hLW1haW9yLXBhcnRlLWRhcy1jb252ZXJzYXMtYWNvbnRlY2UtY29tLXVtLW4tbWVyby1wZXF1ZW5vLWRlLXBhbC5wbmciLCJocmVmIjoiIiwidHlwZSI6ImltYWdlIiwic3R5bGVzIjp7IndpZHRoIjoiMTEwJSIsImhlaWdodCI6ImF1dG8iLCJhbmltYXRpb24iOiJub25lIiwiYm9yZGVyUmFkaXVzIjoiMjRweCJ9LCJjb250ZW50IjoiIn1dLCJzZWN0aW9uRGF0YSI6eyJwYWRkaW5nVG9wIjoiNDBweCIsInBhZGRpbmdMZWZ0IjoiMjBweCIsInBhZGRpbmdSaWdodCI6IjIwcHgiLCJwYWRkaW5nQm90dG9tIjoiNDBweCIsImJhY2tncm91bmRDb2xvciI6IiNmOGY4ZjgifX0seyJpZCI6ImVsXzE3NjY5NzQ3NzQ2NjNfZ2N3d2h2c29iIiwidHlwZSI6InNlY3Rpb24iLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiIiwiY2hpbGRyZW4iOlt7ImlkIjoiZWxfMTc2Njk3NTc1MjQxOV93ZzdhY2ZuYTgiLCJ0eXBlIjoiaGVhZGluZyIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMTBweCIsImZvbnRTaXplIjoiMjRweCIsImFuaW1hdGlvbiI6Im5vbmUiLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJ0ZXh0Q29sb3IiOiIjMWExYTJlIiwiZm9udFdlaWdodCI6IjcwMCJ9LCJjb250ZW50Ijoi8J+TpiBPIFFVRSBWT0PDiiBWQUkgUkVDRUJFUiBBTyBDT01QUkFSIE8gRkFMQSBHUklOR08ifSx7ImlkIjoiZWxfMTc2Njk2NzY0MDExNF93NG5zcHZpcTYiLCJ0eXBlIjoic3BhY2VyIiwic3R5bGVzIjp7ImhlaWdodCI6IjIwcHgiLCJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIifSx7ImlkIjoiZWxfMTc2Njk3NTkyNTA1MV9iYnJoZXgwYWYiLCJ0eXBlIjoiY2FyZCIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMjRweCIsImZvbnRTaXplIjoiMjBweCIsImFuaW1hdGlvbiI6Im5vbmUiLCJ0ZXh0Q29sb3IiOiIjMWExYTJlIiwiYm9yZGVyQ29sb3IiOiIjZTVlN2ViIiwiYm9yZGVyV2lkdGgiOiIxcHgiLCJib3JkZXJSYWRpdXMiOiIxMnB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2ZmZmZmZiJ9LCJjb250ZW50Ijoi8J+TsSBBY2Vzc28gYW8gQXBsaWNhdGl2byBGYWxhIEdyaW5nb3xUZW5oYSBhY2Vzc28gaW1lZGlhdG8gYW8gYXBwIGNvbSBhcyAxMDAwIHBhbGF2cmFzIG1haXMgdXNhZGFzIGRvIGluZ2zDqnMsIG9yZ2FuaXphZGFzIGRlIGZvcm1hIHNpbXBsZXMgcGFyYSBmYWNpbGl0YXIgbyBhcHJlbmRpemFkbywgbWVzbW8gcGFyYSBpbmljaWFudGVzLiJ9LHsiaWQiOiJlbF8xNzY2OTc2ODA2Njk0X3NneW44MG4xZSIsInR5cGUiOiJzcGFjZXIiLCJzdHlsZXMiOnsiaGVpZ2h0IjoiMjBweCIsImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiJ9LHsiaWQiOiJlbF8xNzY2OTc2MTM2MjE4X2hjNzIyMjl0aiIsInR5cGUiOiJjYXJkIiwic3R5bGVzIjp7InBhZGRpbmciOiIyNHB4IiwiZm9udFNpemUiOiIyMHB4IiwiYW5pbWF0aW9uIjoibm9uZSIsInRleHRDb2xvciI6IiMxYTFhMmUiLCJib3JkZXJDb2xvciI6IiNlNWU3ZWIiLCJib3JkZXJXaWR0aCI6IjFweCIsImJvcmRlclJhZGl1cyI6IjEycHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIn0sImNvbnRlbnQiOiLwn46nIMOBdWRpbyBkZSBUb2RhcyBhcyBQYWxhdnJhcyAoQXVkaW9ib29rKXxDYWRhIHBhbGF2cmEgdmVtIGNvbSDDoXVkaW8gZGUgcHJvbsO6bmNpYSwgcGFyYSB2b2PDqiBvdXZpciBlIHJlcGV0aXIgb25kZSBlc3RpdmVyOiBubyBjZWx1bGFyLCBubyBjYXJybyBvdSBlbSBjYXNhLiJ9LHsiaWQiOiJlbF8xNzY2OTc2NzQ5MTM0X2pzZ2VnZTZyOSIsInR5cGUiOiJzcGFjZXIiLCJzdHlsZXMiOnsiaGVpZ2h0IjoiMjBweCIsImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiJ9LHsiaWQiOiJlbF8xNzY2OTc2NTY5ODAzX2lpeDB1YmdmMiIsInR5cGUiOiJjYXJkIiwic3R5bGVzIjp7InBhZGRpbmciOiIyNHB4IiwiZm9udFNpemUiOiIyMHB4IiwiYW5pbWF0aW9uIjoibm9uZSIsInRleHRDb2xvciI6IiMxYTFhMmUiLCJib3JkZXJDb2xvciI6IiNlNWU3ZWIiLCJib3JkZXJXaWR0aCI6IjFweCIsImJvcmRlclJhZGl1cyI6IjEycHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIn0sImNvbnRlbnQiOiLwn5SkIFRyYWR1w6fDo28gU2ltcGxlcyBlIERpcmV0YXxWb2PDqiBhcHJlbmRlIGEgcGFsYXZyYSBlbSBpbmdsw6pzLCB2w6ogYSB0cmFkdcOnw6NvIGVtIHBvcnR1Z3XDqnMgZSBlbnRlbmRlIGV4YXRhbWVudGUgY29tbyBlbGEgw6kgdXNhZGEgbm8gZGlhIGEgZGlhLiJ9LHsiaWQiOiJlbF8xNzY2OTc2NzU3MDQ5X3R5ZzJiemR2eSIsInR5cGUiOiJzcGFjZXIiLCJzdHlsZXMiOnsiaGVpZ2h0IjoiMjBweCIsImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiJ9LHsiaWQiOiJlbF8xNzY2OTc2NjE4NjY3X3o3ZXpsZ3B1ciIsInR5cGUiOiJjYXJkIiwic3R5bGVzIjp7InBhZGRpbmciOiIyNHB4IiwiZm9udFNpemUiOiIyMHB4IiwiYW5pbWF0aW9uIjoibm9uZSIsInRleHRDb2xvciI6IiMxYTFhMmUiLCJib3JkZXJDb2xvciI6IiNlNWU3ZWIiLCJib3JkZXJXaWR0aCI6IjFweCIsImJvcmRlclJhZGl1cyI6IjEycHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIn0sImNvbnRlbnQiOiLimqEgQWNlc3NvIEltZWRpYXRvIGUgVml0YWzDrWNpb3xDb21wcm91LCBhY2Vzc291LlxuTyBjb250ZcO6ZG8gw6kgc2V1IHBhcmEgc2VtcHJlLCBzZW0gbWVuc2FsaWRhZGUsIHNlbSByZW5vdmHDp8OjbyBlIHNlbSBsaW1pdGUgZGUgdXNvLiJ9LHsiaWQiOiJlbF8xNzY2OTc0Nzc2NDAwX3RqcG1sbGtjMSIsInR5cGUiOiJ0ZXh0Iiwic3R5bGVzIjp7InBhZGRpbmciOiIxMHB4IiwiZm9udFNpemUiOiIxNnB4IiwiYW5pbWF0aW9uIjoibm9uZSIsInRleHRBbGlnbiI6ImNlbnRlciIsInRleHRDb2xvciI6IiM0YTRhNmEiLCJmb250V2VpZ2h0IjoiNDAwIn0sImNvbnRlbnQiOiJFIG11aXRvIG1haXMuLiJ9XSwic2VjdGlvbkRhdGEiOnsicGFkZGluZ1RvcCI6IjI0cHgiLCJwYWRkaW5nTGVmdCI6IjE2cHgiLCJwYWRkaW5nUmlnaHQiOiIxNnB4IiwicGFkZGluZ0JvdHRvbSI6IjI0cHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjZjhmOWZhIn19LHsiaWQiOiJlbF8xNzY2OTcyMTYyMTAwX2ZyZXNod3NnciIsInR5cGUiOiJzZWN0aW9uIiwic3R5bGVzIjp7ImFuaW1hdGlvbiI6Im5vbmUifSwiY29udGVudCI6IiIsImNoaWxkcmVuIjpbeyJpZCI6ImVsXzE3NjY5NzY3MzE2NjdfaW5tOWo0aTU0IiwidHlwZSI6InNwYWNlciIsInN0eWxlcyI6eyJoZWlnaHQiOiI2MHB4IiwiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50IjoiIn0seyJpZCI6ImVsXzE3NjY5NzIxNjUyMjlfZmZxb3o5Mnl3IiwidHlwZSI6ImhlYWRpbmciLCJzdHlsZXMiOnsicGFkZGluZyI6IjBweCIsImZvbnRTaXplIjoiMjRweCIsImFuaW1hdGlvbiI6Im5vbmUiLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJ0ZXh0Q29sb3IiOiIjMWExYTJlIiwiZm9udFdlaWdodCI6IjcwMCJ9LCJjb250ZW50IjoiTWFpcyBkZSA1MDAgcGVzc29hcyBjb211bnMgasOhIHRlc3RhcmFtIGUgYXByb3ZhcmFtISJ9LHsiaWQiOiJlbF8xNzY2OTcyMzMwNjM5X2cyMW50bmp2MyIsInR5cGUiOiJ0ZXh0Iiwic3R5bGVzIjp7InBhZGRpbmciOiI5cHgiLCJmb250U2l6ZSI6IjE2cHgiLCJhbmltYXRpb24iOiJub25lIiwidGV4dEFsaWduIjoiY2VudGVyIiwidGV4dENvbG9yIjoiIzRhNGE2YSIsImZvbnRXZWlnaHQiOiI0MDAifSwiY29udGVudCI6IuKtkOKtkOKtkOKtkOKtkCBBdmFsaWHDp8OjbyBNw6lkaWE6IDQsOS81ICsgZGUgNTAwIGFsdW5vcyBzYXRpc2ZlaXRvcyEifV0sInNlY3Rpb25EYXRhIjp7InBhZGRpbmdUb3AiOiIyNHB4IiwicGFkZGluZ0xlZnQiOiIxNnB4IiwicGFkZGluZ1JpZ2h0IjoiMTZweCIsInBhZGRpbmdCb3R0b20iOiIyNHB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2Y4ZjlmYSJ9fSx7ImlkIjoiZWxfMTc2Njk3MDgwMDQ0M19za2ZxeTV1OHIiLCJ0eXBlIjoic2VjdGlvbiIsInN0eWxlcyI6eyJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIiLCJjaGlsZHJlbiI6W3siaWQiOiJlbF8xNzY2OTcwNzg3ODMyXzBiYW9tMXoxbCIsInR5cGUiOiJjYXJvdXNlbCIsInN0eWxlcyI6eyJ3aWR0aCI6IjgwJSIsImhlaWdodCI6IiIsImFuaW1hdGlvbiI6Im5vbmUiLCJib3JkZXJSYWRpdXMiOiI4cHgifSwiY29udGVudCI6IiIsImNhcm91c2VsRGF0YSI6eyJpbWFnZXMiOlsiaHR0cHM6Ly9pLmliYi5jby83TDdRMDlKLzEuanBnIiwiaHR0cHM6Ly9pLmliYi5jby9WMDBWR0ZoOS8yLmpwZyIsImh0dHBzOi8vaS5pYmIuY28vcUZSNmtjNjkvMy5qcGciLCJodHRwczovL2kuaWJiLmNvL05uVEcxcG14LzQuanBnIiwiaHR0cHM6Ly9pLmliYi5jby83eHRDdkxobS81LmpwZyJdLCJhdXRvUGxheSI6dHJ1ZSwiaW50ZXJ2YWwiOjYwMDB9fV0sInNlY3Rpb25EYXRhIjp7InBhZGRpbmdUb3AiOiIyNHB4IiwicGFkZGluZ0xlZnQiOiIxNnB4IiwidXNlR3JhZGllbnQiOmZhbHNlLCJwYWRkaW5nUmlnaHQiOiIxNnB4IiwicGFkZGluZ0JvdHRvbSI6IjI0cHgiLCJiYWNrZ3JvdW5kU2l6ZSI6ImNvdmVyIiwiZ3JhZGllbnRDb2xvcjEiOiIjMWExYTJlIiwiZ3JhZGllbnRDb2xvcjIiOiIjMGYwZjFhIiwiYmFja2dyb3VuZENvbG9yIjoiI2Y4ZjlmYSIsImJhY2tncm91bmRSZXBlYXQiOiJuby1yZXBlYXQiLCJncmFkaWVudERpcmVjdGlvbiI6InRvIGJvdHRvbSIsImJhY2tncm91bmRQb3NpdGlvbiI6ImNlbnRlciJ9fSx7ImlkIjoiZWxfMTc2Njk2NzY0MDExNF85Y2Z5Y3JpdmMiLCJ0eXBlIjoic2VjdGlvbiIsInN0eWxlcyI6eyJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIiLCJjaGlsZHJlbiI6W3siaWQiOiJlbF8xNzY2OTc0OTU2OTg3X25jazhmbW5yNCIsInR5cGUiOiJhbmNob3IiLCJzdHlsZXMiOnsiYW5pbWF0aW9uIjoibm9uZSJ9LCJjb250ZW50Ijoib2ZlcnRhIn0seyJpZCI6ImVsXzE3NjY5Njc2NDAxMTRfZGNnbmZzajV6IiwidHlwZSI6Im9mZmVyIiwic3R5bGVzIjp7InBhZGRpbmciOiIzMnB4IiwiYW5pbWF0aW9uIjoicHVsc2UiLCJ0ZXh0QWxpZ24iOiJjZW50ZXIiLCJ0ZXh0Q29sb3IiOiIjMWExYTFhIiwiYm9yZGVyQ29sb3IiOiIjMjJjNTVlIiwiYm9yZGVyV2lkdGgiOiIzcHgiLCJib3JkZXJSYWRpdXMiOiIxNnB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2ZmZmZmZiJ9LCJjb250ZW50IjoiIiwib2ZmZXJEYXRhIjp7InBvcHVwIjp7ImJhZGdlIjoiVVBHUkFERSBQUkVNSVVNIiwicHJpY2UiOiJSJCAxMCwwMCIsInRpdGxlIjoiUGFjb3RlIFByZW1pdW0iLCJlbmFibGVkIjpmYWxzZSwiYmVuZWZpdHMiOlsiQmVuZWbDrWNpbyBwcmVtaXVtIDEiLCJCZW5lZsOtY2lvIHByZW1pdW0gMiJdLCJhY2NlbnRDb2xvciI6IiNkNGE4NTMiLCJwYXltZW50VHlwZSI6IkFjZXNzbyBWSVRBTMONQ0lPIiwicHJpbWFyeUJ1dHRvblVybCI6IiMiLCJwcmltYXJ5QnV0dG9uVGV4dCI6IlF1ZXJvIG8gUHJlbWl1bSIsInNlY29uZGFyeUJ1dHRvblVybCI6IiMiLCJzZWNvbmRhcnlCdXR0b25UZXh0IjoiUXVlcm8gc8OzIGEgb2ZlcnRhIGLDoXNpY2EifSwicHJpY2UiOiJSJCAxOSw5MCIsInRpdGxlIjoiQ09NUFJFIEFHT1JBIEUgVEVOSEEgQUNFU1NPIElNRURJQVRPIiwidmFyaWFudCI6ImNsYXNzaWMiLCJiZW5lZml0cyI6WyIgR3VpYSAxMDAwIFBhbGF2cmFzIiwiIEF1ZGlvYm9vayAxMDAwIFBhbGF2cmFzXG4iLCIgVHJhZHXDp8OjbyBlIFByb27Dum5jaWFcbiIsIkFjZXNzbyBJbWVkaWF0byIsIkFjZXNzbyBWaXRhbMOtY2lvIl0sImJ1dHRvblVybCI6Imh0dHBzOi8vcGF5Lmxvd2lmeS5jb20uYnIvY2hlY2tvdXQ/cHJvZHVjdF9pZD1QZHl2TEsiLCJidXR0b25UZXh0Ijoi8J+RiSBDb21wcmFyIGFnb3JhIiwiYWNjZW50Q29sb3IiOiIjMjJjNTVlIiwiYnV0dG9uQ29sb3IiOiIjMjJjNTVlIiwicGF5bWVudFR5cGUiOiJTZW0gbWVuc2FsaWRhZGVzLCBuZW0gYXNzaW5hdHVyYXMsIG5lbSBwZWdhZGluaGFzLi4uIiwicHJvZHVjdEltYWdlIjoiaHR0cHM6Ly9pLmltZ3VyLmNvbS9kZnVIbTM4LnBuZyIsIm9yaWdpbmFsUHJpY2UiOiJSJCA2Nyw5MCJ9fSx7ImlkIjoiZWxfMTc2Njk3MzMyMDQ4Nl95bDN2dnJseHIiLCJ0eXBlIjoic3BhY2VyIiwic3R5bGVzIjp7ImhlaWdodCI6IjYwcHgiLCJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIifSx7ImlkIjoiZWxfMTc2Njk2NzY0MDExNF9hYzVzZHlyYzkiLCJ0eXBlIjoid2hhdHNhcHAtY2FyZCIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMTZweCAyNHB4IiwiYW5pbWF0aW9uIjoiZmFkZS1pbiIsInRleHRBbGlnbiI6ImNlbnRlciIsInRleHRDb2xvciI6IiMxYTFhMmUiLCJib3JkZXJDb2xvciI6IiMyNUQzNjYiLCJib3JkZXJXaWR0aCI6IjJweCIsImJvcmRlclJhZGl1cyI6IjEycHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIn0sImNvbnRlbnQiOiJBcMOzcyBhIGNvbXByYSwgdm9jw6ogcmVjZWJlIGFjZXNzbyBhbyBNYXRlcmlhbCBjb21wbGV0byBkaXJldGFtZW50ZSBubyBzZXUgV2hhdHNBcHAifV0sInNlY3Rpb25EYXRhIjp7InBhZGRpbmdUb3AiOiI0MHB4IiwicGFkZGluZ0xlZnQiOiIyMHB4IiwicGFkZGluZ1JpZ2h0IjoiMjBweCIsInBhZGRpbmdCb3R0b20iOiI0MHB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2YwZjlmNCJ9fSx7ImlkIjoiZWxfMTc2Njk2NzY0MDExNF85MmF5Y3FrYWsiLCJ0eXBlIjoic2VjdGlvbiIsInN0eWxlcyI6eyJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIiLCJjaGlsZHJlbiI6W3siaWQiOiJlbF8xNzY2OTczMDI4NTE1X3M1d3Jmenk5ZyIsInR5cGUiOiJndWFyYW50ZWUiLCJzdHlsZXMiOnsicGFkZGluZyI6IjMycHgiLCJhbmltYXRpb24iOiJub25lIiwidGV4dENvbG9yIjoiIzFhMWEyZSIsImJvcmRlclJhZGl1cyI6IjE2cHgiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjZmZmZmZmIn0sImNvbnRlbnQiOiIiLCJndWFyYW50ZWVEYXRhIjp7ImRheXMiOjcsInRpdGxlIjoiR2FyYW50aWEgZGUgU2F0aXNmYcOnw6NvIiwiZmVhdHVyZXMiOlsiU2VtIGJ1cm9jcmFjaWEiLCJSZWVtYm9sc28gdG90YWwiXSwiYWNjZW50Q29sb3IiOiIjMjJjNTVlIiwiZGVzY3JpcHRpb24iOiJTZSB2b2PDqiBuw6NvIGZpY2FyIHNhdGlzZmVpdG8sIGRldm9sdmVtb3Mgc2V1IGRpbmhlaXJvLiJ9fSx7ImlkIjoiZWxfMTc2Njk3Mjc4NzczOF9haG5rMGEycnoiLCJ0eXBlIjoic3BhY2VyIiwic3R5bGVzIjp7ImhlaWdodCI6IjYwcHgiLCJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIifSx7ImlkIjoiZWxfMTc2Njk2NzY0MDExNF8yeDdzZnk2dDQiLCJ0eXBlIjoiZmFxIiwic3R5bGVzIjp7InBhZGRpbmciOiIyNHB4IiwiYW5pbWF0aW9uIjoiZmFkZS1pbiIsInRleHRDb2xvciI6IiMxYTFhMWEiLCJib3JkZXJSYWRpdXMiOiIxNnB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2Y4ZjhmOCJ9LCJjb250ZW50IjoiIiwiZmFxRGF0YSI6eyJpdGVtcyI6W3siYW5zd2VyIjoiQXDDs3MgYSBjb25maXJtYcOnw6NvIGRvIHBhZ2FtZW50bywgdm9jw6ogcmVjZWJlcsOhIG8gbWF0ZXJpYWwgZW0gUERGIGRpcmV0YW1lbnRlIG5vIHNldSBXaGF0c0FwcCBlIGUtbWFpbC4iLCJxdWVzdGlvbiI6IkNvbW8gdm91IHJlY2ViZXIgbyBtYXRlcmlhbD8ifSx7ImFuc3dlciI6IlPDo28gMTAwMCBwYWxhdnJhcyBlbSBpbmdsw6pzLCBlc2NvbGhpZGFzIHBvciBzZXJlbSBhcyBtYWlzIHVzYWRhcyBubyBpbmdsw6pzIGRvIGRpYSBhIGRpYSwgY2FkYSB1bWEgY29tIHRyYWR1w6fDo28gZSDDoXVkaW8gcGFyYSBvdXZpciBlIHJlcGV0aXIiLCJxdWVzdGlvbiI6IlPDo28gcXVhbnRhcyBwYWxhdnJhcz8ifSx7ImFuc3dlciI6IlNpbS4gRnVuY2lvbmEgcGFyYSBxdWFscXVlciBwZXNzb2EsIGluY2x1c2l2ZSBpbmljaWFudGVzIGUgcXVlbSBqw6EgdGVudG91IGFwcmVuZGVyIGluZ2zDqnMgYW50ZXMgZSBuw6NvIGNvbnNlZ3VpdS4iLCJxdWVzdGlvbiI6IkZ1bmNpb25hIHBhcmEgcXVhbHF1ZXIgcGVzc29hPyJ9LHsiYW5zd2VyIjoiQWNlaXRhbW9zIFBJWCBlIGNhcnTDo28gZGUgY3LDqWRpdG8uIiwicXVlc3Rpb24iOiJRdWFpcyBmb3JtYXMgZGUgcGFnYW1lbnRvIHPDo28gYWNlaXRhcz8ifSx7ImFuc3dlciI6IlNpbSEgT2ZlcmVjZW1vcyBnYXJhbnRpYSBkZSA3IGRpYXMuIFNlIG7Do28gZmljYXIgc2F0aXNmZWl0bywgZGV2b2x2ZW1vcyAxMDAlIGRvIHNldSBkaW5oZWlyby4iLCJxdWVzdGlvbiI6IlRlbSBnYXJhbnRpYT8ifV0sImFjY2VudENvbG9yIjoiIzIyYzU1ZSJ9fV0sInNlY3Rpb25EYXRhIjp7InBhZGRpbmdUb3AiOiI0MHB4IiwicGFkZGluZ0xlZnQiOiIyMHB4IiwicGFkZGluZ1JpZ2h0IjoiMjBweCIsInBhZGRpbmdCb3R0b20iOiI0MHB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2ZmZmZmZiJ9fSx7ImlkIjoiZWxfMTc2Njk2NzY0MDExNF9zeDlzbGlucnkiLCJ0eXBlIjoic2VjdGlvbiIsInN0eWxlcyI6eyJhbmltYXRpb24iOiJub25lIn0sImNvbnRlbnQiOiIiLCJjaGlsZHJlbiI6W3siaWQiOiJlbF8xNzY2OTY3NjQwMTE0XzAyeDRmc2k3NSIsInR5cGUiOiJ0ZXh0Iiwic3R5bGVzIjp7InBhZGRpbmciOiIwIDAgOHB4IiwiZm9udFNpemUiOiIxOHB4IiwiYW5pbWF0aW9uIjoiZmFkZS1pbiIsInRleHRBbGlnbiI6ImNlbnRlciIsInRleHRDb2xvciI6IiMxYTFhMWEiLCJmb250V2VpZ2h0IjoiNzAwIn0sImNvbnRlbnQiOiLwn5OpIFByZWNpc2EgZGUgQWp1ZGE/In0seyJpZCI6ImVsXzE3NjY5Njg4ODI1MjBfa3FsbHQwemRxIiwidHlwZSI6InNvY2lhbC1pY29ucyIsInN0eWxlcyI6eyJwYWRkaW5nIjoiMTZweCIsImFuaW1hdGlvbiI6Im5vbmUiLCJ0ZXh0QWxpZ24iOiJjZW50ZXIifSwiY29udGVudCI6IiIsInNvY2lhbEljb25zRGF0YSI6eyJpY29uU2l6ZSI6Im1lZGl1bSIsImljb25TdHlsZSI6ImZpbGxlZCIsInBsYXRmb3JtcyI6W3sidXJsIjoiaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9mYWxhLmdyaW5nb29mYyIsInBsYXRmb3JtIjoiaW5zdGFncmFtIn1dfX0seyJpZCI6ImVsXzE3NjY5Njc2NDAxMTRfYWluczA2aGtxIiwidHlwZSI6InRleHQiLCJzdHlsZXMiOnsicGFkZGluZyI6IjAgMCAyNHB4IiwiZm9udFNpemUiOiIxNHB4IiwiYW5pbWF0aW9uIjoiZmFkZS1pbiIsInRleHRBbGlnbiI6ImNlbnRlciIsInRleHRDb2xvciI6IiM0YTRhNGEiLCJmb250V2VpZ2h0IjoiNDAwIn0sImNvbnRlbnQiOiJFbnZpZSB1bSBlLW1haWwgcGFyYSBjb250YXRvc3Vwb3J0b2ZpY2lhbEBnbWFpbC5jb20gZSBub3NzYSBlcXVpcGUgcmVzcG9uZGVyw6EgcmFwaWRhbWVudGUgcGFyYSBhanVkw6EtbG8gY29tIHF1YWxxdWVyIGTDunZpZGEgb3UgcHJvYmxlbWEuIn0seyJpZCI6ImVsXzE3NjY5Njc2NDAxMTRfMHU1dGp0ZDljIiwidHlwZSI6InRleHQiLCJzdHlsZXMiOnsicGFkZGluZyI6IjAiLCJmb250U2l6ZSI6IjEycHgiLCJhbmltYXRpb24iOiJmYWRlLWluIiwidGV4dEFsaWduIjoiY2VudGVyIiwidGV4dENvbG9yIjoiIzg4ODg4OCIsImZvbnRXZWlnaHQiOiI0MDAifSwiY29udGVudCI6Ik5vIEZhbGEgR3JpbmdvLCBkZXNlbnZvbHZlbW9zIHVtIG3DqXRvZG8gc2ltcGxlcyBlIGRpcmV0byBwYXJhIGFqdWRhciBwZXNzb2FzIGNvbXVucyBhIGVudGVuZGVyIGluZ2zDqnMgZGUgZm9ybWEgcHLDoXRpY2EgZSBzZW0gY29tcGxpY2HDp8Ojby5cbk5vc3NvIGNvbXByb21pc3NvIMOpIGVuc2luYXIgYXBlbmFzIG8gcXVlIHJlYWxtZW50ZSBpbXBvcnRhIG5vIGluZ2zDqnMgZG8gZGlhIGEgZGlhLCB1c2FuZG8gcGFsYXZyYXMgZSDDoXVkaW9zIHF1ZSBmYWNpbGl0YW0gbyBhcHJlbmRpemFkbywgbWVzbW8gcGFyYSBxdWVtIG51bmNhIGNvbnNlZ3VpdSBhcHJlbmRlciBhbnRlcy4ifV0sInNlY3Rpb25EYXRhIjp7InBhZGRpbmdUb3AiOiI0MHB4IiwicGFkZGluZ0xlZnQiOiIyMHB4IiwicGFkZGluZ1JpZ2h0IjoiMjBweCIsInBhZGRpbmdCb3R0b20iOiI0MHB4IiwiYmFja2dyb3VuZENvbG9yIjoiI2Y4ZjhmOCJ9fV0sInBhZ2VTdHlsZXMiOnsiYmFja2dyb3VuZENvbG9yIjoiI2ZmZmZmZiIsIm1heFdpZHRoIjoiNDgwcHgiLCJwYWRkaW5nIjoiMjBweCIsInVzZUdyYWRpZW50IjpmYWxzZSwiZ3JhZGllbnRDb2xvcjEiOiIjMWExYTJlIiwiZ3JhZGllbnRDb2xvcjIiOiIjMGYwZjFhIiwiZ3JhZGllbnREaXJlY3Rpb24iOiJ0byBib3R0b20iLCJmb250RmFtaWx5IjoiSW50ZXIsIHNhbnMtc2VyaWYifSwic2NyaXB0U2V0dGluZ3MiOnsidXRtaWZ5U2NyaXB0IjpmYWxzZSwiZmFjZWJvb2tQaXhlbCI6dHJ1ZSwiZmFjZWJvb2tQaXhlbElkIjoiMjY5MDU2MjkwNDYzMTgyOCIsInV0bWlmeVBpeGVsIjpmYWxzZSwidXRtaWZ5UGl4ZWxJZCI6IjY5NWE5YThiNWU2NzU5MzU0OWQ1ZjMxZiIsImJhY2tSZWRpcmVjdCI6ZmFsc2UsImJhY2tSZWRpcmVjdFVybCI6IiIsInVyZ2VuY3lCYXIiOnRydWUsInVyZ2VuY3lCYXJTdHlsZSI6ImRhdGUiLCJ1cmdlbmN5QmFyVGV4dCI6IiIsInVyZ2VuY3lCYXJNaW51dGVzIjoxNSwidXJnZW5jeUJhckJnQ29sb3IiOiIjZjYwNDA0IiwidXJnZW5jeUJhclRleHRDb2xvciI6IiNmZmZmZmYiLCJ1cmdlbmN5QmFySGlnaGxpZ2h0Q29sb3IiOiIjZmZmZjAwIiwiZmFrZVB1cmNoYXNlIjp0cnVlLCJmYWtlUHVyY2hhc2VHZW5kZXIiOiJib3RoIiwiZmFrZVB1cmNoYXNlSW50ZXJ2YWwiOjEyLCJmYWtlUHVyY2hhc2VCZ0NvbG9yIjoiIzIyYzU1ZSIsImZha2VQdXJjaGFzZVRleHRDb2xvciI6IiNmZmZmZmYiLCJmYWtlUHVyY2hhc2VQcm9kdWN0TmFtZSI6IkZhbGEgR3JpbmdvIC0gQXByZW5kYSBJbmdsw6pzIiwiZml4ZWRCdXR0b24iOmZhbHNlLCJmaXhlZEJ1dHRvblRleHQiOiJDT01QUkFSIEFHT1JBIiwiZml4ZWRCdXR0b25VcmwiOiIjIiwiZml4ZWRCdXR0b25CZ0NvbG9yIjoiI2RjMjYyNiIsImZpeGVkQnV0dG9uVGV4dENvbG9yIjoiI2ZmZmZmZiIsImZpeGVkQnV0dG9uQ29udGFpbmVyQmdDb2xvciI6InJnYmEoMCwwLDAsMC44KSIsImV4aXRQb3B1cCI6ZmFsc2UsImV4aXRQb3B1cFRpdGxlIjoiRXNwZXJlISIsImV4aXRQb3B1cFRleHQiOiJWb2PDqiBlc3TDoSBwcmVzdGVzIGEgcGVyZGVyIGVzc2Egb3BvcnR1bmlkYWRlIMO6bmljYSEiLCJleGl0UG9wdXBCdXR0b25UZXh0IjoiUVVFUk8gQVBST1ZFSVRBUiIsImV4aXRQb3B1cEJ1dHRvblVybCI6IiMiLCJleGl0UG9wdXBCZ0NvbG9yIjoiIzFhMWEyZSIsImV4aXRQb3B1cFRleHRDb2xvciI6IiNmZmZmZmYiLCJleGl0UG9wdXBCdXR0b25CZ0NvbG9yIjoiIzIyYzU1ZSIsImV4aXRQb3B1cEJ1dHRvblRleHRDb2xvciI6IiNmZmZmZmYiLCJleGl0UG9wdXBJbWFnZSI6IiIsImV4aXRQb3B1cEVuYWJsZWQiOmZhbHNlLCJmYWtlTm90aWZpY2F0aW9uc0VuYWJsZWQiOmZhbHNlfX0=:END_BUILD_EASY_DATA -->
+    <title>Fala Gringo - Aprenda Inglês</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Meta Pixel Code -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- UTMify Pixel -->
+    <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck
+        data-utmify-prevent-subids async defer></script>
+
     <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '2690562904631828');
-    fbq('track', 'PageView');
+        window.pixelId = "695a9a8b5e67593549d5f31f";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("defer", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=2690562904631828&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var dateEl = document.getElementById('urgency-date');
-          if (dateEl) {
-            var now = new Date();
-            var day = now.getDate();
-            var month = now.getMonth() + 1;
-            var year = now.getFullYear();
-            dateEl.textContent = day + '/' + month + '/' + year;
-          }
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var dateEl = document.getElementById('urgency-date');
+            if (dateEl) {
+                var now = new Date();
+                var day = now.getDate();
+                var month = now.getMonth() + 1;
+                var year = now.getFullYear();
+                dateEl.textContent = day + '/' + month + '/' + year;
+            }
         });
-      </script>
+    </script>
     <script>
-      (function() {
-        var names = ["Letícia","Maria","Ana","Juliana","Fernanda","Camila","Beatriz","Larissa","Amanda","Gabriela","Mariana","Carolina","Rafaela","Patrícia","Bruna","Lucas","Pedro","João","Gabriel","Rafael","Bruno","Carlos","Matheus","Felipe","Gustavo","Ricardo","André","Marcelo","Thiago","Leonardo"];
-        var productName = "Fala Gringo - Aprenda Inglês";
-        var interval = 12 * 1000;
-        
-        function getRandomName() {
-          return names[Math.floor(Math.random() * names.length)];
-        }
-        
-        function showNotification() {
-          var existing = document.getElementById('fake-purchase-notification');
-          if (existing) existing.remove();
-          
-          var notification = document.createElement('div');
-          notification.id = 'fake-purchase-notification';
-          notification.innerHTML = '<div style="width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:18px;">✓</div><div><div style="font-weight:600;font-size:14px;">' + getRandomName() + ' acabou de comprar</div><div style="font-size:12px;opacity:0.8;">' + productName + '</div></div>';
-          notification.style.cssText = 'position:fixed;bottom:20px;left:20px;background-color:#22c55e;color:#ffffff;padding:12px 20px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:9998;display:flex;align-items:center;gap:12px;animation:slideInLeft 0.4s ease-out;max-width:300px;';
-          document.body.appendChild(notification);
-          
-          setTimeout(function() {
-            if (notification.parentNode) notification.remove();
-          }, 4000);
-        }
-        
-        setTimeout(showNotification, 3000);
-        setInterval(showNotification, interval);
-      })();
+        (function () {
+            var names = ["Letícia", "Maria", "Ana", "Juliana", "Fernanda", "Camila", "Beatriz", "Larissa", "Amanda", "Gabriela", "Mariana", "Carolina", "Rafaela", "Patrícia", "Bruna", "Lucas", "Pedro", "João", "Gabriel", "Rafael", "Bruno", "Carlos", "Matheus", "Felipe", "Gustavo", "Ricardo", "André", "Marcelo", "Thiago", "Leonardo"];
+            var productName = "Fala Gringo - Aprenda Inglês";
+            var interval = 12 * 1000;
+            function getRandomName() { return names[Math.floor(Math.random() * names.length)]; }
+            function showNotification() {
+                var existing = document.getElementById('fake-purchase-notification');
+                if (existing) existing.remove();
+                var notification = document.createElement('div');
+                notification.id = 'fake-purchase-notification';
+                notification.innerHTML = '<div style="width:40px;height:40px;border-radius:50%;background-color:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:18px;">✓</div><div><div style="font-weight:600;font-size:14px;">' + getRandomName() + ' acabou de comprar</div><div style="font-size:12px;opacity:0.8;">' + productName + '</div></div>';
+                notification.style.cssText = 'position:fixed;bottom:20px;left:20px;background-color:#22c55e;color:#ffffff;padding:12px 20px;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.3);z-index:9998;display:flex;align-items:center;gap:12px;animation:slideInLeft 0.4s ease-out;max-width:300px;';
+                document.body.appendChild(notification);
+                setTimeout(function () { if (notification.parentNode) notification.remove(); }, 4000);
+            }
+            setTimeout(showNotification, 3000);
+            setInterval(showNotification, interval);
+        })();
     </script>
     <style>
-      @keyframes slideInLeft {
-        from { transform: translateX(-100%); opacity: 0; }
-        to { transform: translateX(0); opacity: 1; }
-      }
-    </style>
-    <style>
+        @keyframes slideInLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
             overflow-x: clip;
         }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Inter', sans-serif;
             background-color: #ffffff;
             min-height: 100vh;
-            padding: 0;
             overflow-x: clip;
             width: 100%;
-            max-width: 100vw;
             -webkit-overflow-scrolling: touch;
         }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 0;
-            }
-        }
-        
+
         .container {
             max-width: 480px;
             margin: 0 auto;
             background-color: #ffffff;
             padding: 20px;
-            border-radius: 0px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             width: 100%;
         }
-        
-        .content > :not(.section) {
+
+        .content> :not(.section) {
             margin-bottom: 16px;
         }
-        
-        .content > :not(.section):last-child {
-            margin-bottom: 0;
+
+        .section {
+            position: relative;
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            margin-right: -20px;
+            padding: 40px 20px;
         }
-        
-        .content > .section {
-            margin-bottom: 0;
-        }
-        
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
-        @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes slideLeft {
-            from {
-                opacity: 0;
-                transform: translateX(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes slideRight {
-            from {
-                opacity: 0;
-                transform: translateX(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        
-        @keyframes scaleIn {
-            from {
-                opacity: 0;
-                transform: scale(0.9);
-            }
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-        
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-        }
-        
+
         @keyframes pulseBtn {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
             }
+
             50% {
                 transform: scale(1.05);
                 box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             }
         }
-        
-        @keyframes shakeBtn {
-            0%, 100% { transform: translateX(0); }
-            10%, 30%, 50%, 70%, 90% { transform: translateX(-2px); }
-            20%, 40%, 60%, 80% { transform: translateX(2px); }
-            95% { transform: translateX(0); }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            color: #1a1a1a;
         }
-        
-        @keyframes glowBtn {
-            0%, 100% {
-                box-shadow: 0 0 5px rgba(255, 255, 255, 0.2), 0 4px 14px rgba(0, 0, 0, 0.2);
-            }
-            50% {
-                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px currentColor, 0 4px 14px rgba(0, 0, 0, 0.2);
-            }
+
+        p {
+            color: #4a4a4a;
+            font-size: 18px;
+            line-height: 1.5;
         }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 0px;
-            }
-            
-            .container {
-                padding: 16px;
-            }
+
+        /* Carousel Styles */
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 12px;
+            padding: 10px 0;
+            -webkit-overflow-scrolling: touch;
+            /* smooth scrolling on iOS */
+        }
+
+        .carousel::-webkit-scrollbar {
+            display: none;
+            /* Hide scrollbar */
+        }
+
+        .carousel img {
+            width: 85%;
+            /* Shows part of the next slide to encourage scrolling */
+            flex-shrink: 0;
+            border-radius: 8px;
+            scroll-snap-align: center;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            margin-bottom: 10px;
+            border-radius: 8px;
+            background: #f8f8f8;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 15px;
+            cursor: pointer;
+            font-weight: 700;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #000000;
+            font-size: 16px;
+        }
+
+        .faq-question::after {
+            content: '▼';
+            font-size: 12px;
+            color: #22c55e;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 15px;
+            color: #4a4a4a;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding-bottom: 15px;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <div style="margin: calc(-1 * 20px) calc(-1 * 20px) 0; width: calc(100% + 2 * 20px); background-color:#f60404;color:#ffffff;padding:10px 20px;text-align:center;font-weight:600;font-size:14px;display:flex;justify-content:center;align-items:center;gap:8px;font-family:Arial,sans-serif;">
-              <span><span style="color:#ffff00">⚡</span> Desconto só <span style="color:#ffff00;font-weight:700">HOJE</span> nessa página <span id="urgency-date" style="color:#ffff00;font-weight:700"></span></span>
-            </div>
+        <!-- Barra de Urgência -->
+        <div
+            style="margin: -20px -20px 0; background-color:#f60404; color:#ffffff; padding:10px 20px; text-align:center; font-weight:600; font-size:14px; display:flex; justify-content:center; align-items:center; gap:8px;">
+            <span>⚡ Desconto só <span style="color:#ffff00;font-weight:700">HOJE</span> nessa página <span
+                    id="urgency-date" style="color:#ffff00;font-weight:700"></span></span>
+        </div>
+
         <div class="content">
-        <div class="section" style="position: relative; background-color: #ffffff; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #1a1a1a; font-size: 28px; font-weight: 700; text-align: center; padding: 12px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0s; opacity: 0;"><span style="color: #1e3a8a;">Apenas </span>
-  <span style="color: #facc15;">7 Dias</span>
-  <span style="color: #1e3a8a;"> e Mais Nada e Você Já Entende Inglês!
-</span></h2>
-<p style="color: #4a4a4a; font-size: 18px; font-weight: 600; text-align: center; padding: 10px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.1s; opacity: 0;">🤡 Não caia no golpe das escolas de inglês e não pague por curso, apenas decore essas palavras!</p>
-<div style="display: flex; justify-content: center; margin-top: 0px; margin-bottom: 0px;"><img src="https://i.ibb.co/5Wz5SV83/sem-fundo.png" alt="Imagem" style="width: 100%; height: auto; border-radius: 8px; object-fit: cover;  " /></div>
-<div style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
-        <a href="#oferta"  onclick="event.preventDefault(); var target = document.getElementById('oferta'); if(target) target.scrollIntoView({behavior: 'smooth', block: 'start'});" style="background-color: #22c55e; color: #ffffff; font-size: 18px; font-weight: 700; text-align: center; padding: 18px 48px; border-radius: 12px; animation: pulseBtn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; display: inline-block; text-decoration: none; transition: transform 0.2s; cursor: pointer;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">QUERO APRENDER INGLÊS!</a>
-      </div></div></div>
-        <div class="section" style="position: relative; background-color: #f8f8f8; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="display: flex; justify-content: center; margin-top: 0px; margin-bottom: 0px;"><img src="https://i.ibb.co/Fq7SDcdH/Voc-sabia-que-em-qualquer-idioma-a-maior-parte-das-conversas-acontece-com-um-n-mero-pequeno-de-pal.png" alt="Imagem" style="width: 110%; height: auto; border-radius: 24px; object-fit: cover;  " /></div></div></div>
-        <div class="section" style="position: relative; background-color: #f8f9fa; padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 16px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><h2 style="color: #1a1a2e; font-size: 24px; font-weight: 700; text-align: center; padding: 10px;">📦 O QUE VOCÊ VAI RECEBER AO COMPRAR O FALA GRINGO</h2>
-<div style="height: 20px;"></div>
-<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
-        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">📱 Acesso ao Aplicativo Fala Gringo</h3>
-        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Tenha acesso imediato ao app com as 1000 palavras mais usadas do inglês, organizadas de forma simples para facilitar o aprendizado, mesmo para iniciantes.</p>
-      </div>
-<div style="height: 20px;"></div>
-<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
-        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">🎧 Áudio de Todas as Palavras (Audiobook)</h3>
-        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Cada palavra vem com áudio de pronúncia, para você ouvir e repetir onde estiver: no celular, no carro ou em casa.</p>
-      </div>
-<div style="height: 20px;"></div>
-<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
-        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">🔤 Tradução Simples e Direta</h3>
-        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Você aprende a palavra em inglês, vê a tradução em português e entende exatamente como ela é usada no dia a dia.</p>
-      </div>
-<div style="height: 20px;"></div>
-<div style="background-color: #ffffff; color: #1a1a2e; font-size: 20px; padding: 24px; border-radius: 12px; border-color: #e5e7eb; border-width: 1px; border-style: solid;">
-        <h3 style="font-size: 20px; font-weight: 600; margin-bottom: 8px;">⚡ Acesso Imediato e Vitalício</h3>
-        <p style="font-size: 14px; opacity: 0.8; margin: 0;">Comprou, acessou.
-O conteúdo é seu para sempre, sem mensalidade, sem renovação e sem limite de uso.</p>
-      </div>
-<p style="color: #4a4a6a; font-size: 16px; font-weight: 400; text-align: center; padding: 10px;">E muito mais..</p></div></div>
-        <div class="section" style="position: relative; background-color: #f8f9fa; padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 16px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="height: 60px;"></div>
-<h2 style="color: #1a1a2e; font-size: 24px; font-weight: 700; text-align: center; padding: 0px;">Mais de 500 pessoas comuns já testaram e aprovaram!</h2>
-<p style="color: #4a4a6a; font-size: 16px; font-weight: 400; text-align: center; padding: 9px;">⭐⭐⭐⭐⭐ Avaliação Média: 4,9/5 + de 500 alunos satisfeitos!</p></div></div>
-        <div class="section" style="position: relative; background-color: #f8f9fa; padding-top: 24px; padding-bottom: 24px; padding-left: 16px; padding-right: 16px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="display: flex; justify-content: center;">
-        <div style="position: relative; overflow: hidden; width: 80%; max-width: 80%; border-radius: 8px; ">
-          <div id="carousel_jm9kmgjxn" style="display: flex; transition: transform 0.5s ease-out;">
-            
-        <img src="https://i.ibb.co/7L7Q09J/1.jpg" alt="Slide 1" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
-      
-        <img src="https://i.ibb.co/V00VGFh9/2.jpg" alt="Slide 2" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
-      
-        <img src="https://i.ibb.co/qFR6kc69/3.jpg" alt="Slide 3" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
-      
-        <img src="https://i.ibb.co/NnTG1pmx/4.jpg" alt="Slide 4" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
-      
-        <img src="https://i.ibb.co/7xtCvLhm/5.jpg" alt="Slide 5" style="width: 100%; flex-shrink: 0; object-fit: cover; height: auto; border-radius: 8px;" />
-      
-          </div>
-          <button onclick="(function(){var c=document.getElementById('carousel_jm9kmgjxn');var i=parseInt(c.dataset.index||0);var t=5;i=(i-1+t)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;})();" style="position: absolute; left: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background-color: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-          <button onclick="(function(){var c=document.getElementById('carousel_jm9kmgjxn');var i=parseInt(c.dataset.index||0);var t=5;i=(i+1)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;})();" style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border-radius: 50%; background-color: rgba(0,0,0,0.5); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-          <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
-            <span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span><span style="width: 8px; height: 8px; border-radius: 50%; background-color: rgba(255,255,255,0.5);"></span>
-          </div>
-          <script>(function(){var c=document.getElementById('carousel_jm9kmgjxn');var i=0;var t=5;setInterval(function(){i=(i+1)%t;c.style.transform='translateX(-'+i*100+'%)';c.dataset.index=i;},6000);})();</script>
-        </div>
-      </div></div></div>
-        <div class="section" style="position: relative; background-color: #f0f9f4; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div id="oferta" style="height: 0; overflow: hidden;"></div>
-<div style="background-color: #ffffff; color: #1a1a1a; text-align: center; padding: 32px; border-radius: 16px; border-color: #22c55e; border-width: 3px; border-style: solid; animation: pulseBtn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
-          <div style="margin-bottom: 20px;"><img src="https://i.imgur.com/dfuHm38.png" alt="COMPRE AGORA E TENHA ACESSO IMEDIATO" style="width: 100%; max-width: 250px; height: auto; border-radius: 12px; margin: 0 auto; display: block;" /></div>
-          <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: #1a1a1a;">COMPRE AGORA E TENHA ACESSO IMEDIATO</h3>
-          <p style="font-size: 14px; opacity: 0.7; margin-bottom: 8px;">Sem mensalidades, nem assinaturas, nem pegadinhas...</p>
-          <p style="font-size: 20px; text-decoration: line-through; opacity: 0.5; margin-bottom: 4px;">R$ 67,90</p>
-          <div style="margin-bottom: 24px;">
-            <span style="font-size: 48px; font-weight: 800; color: #22c55e; line-height: 1;">R$ 19,90</span>
-          </div>
-          <div style="height: 1px; background-color: #22c55e; margin: 0 -16px 24px;"></div>
-          <div style="text-align: left; margin-bottom: 24px;">
-            
-        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <span style="font-size: 15px; line-height: 1.5;"> Guia 1000 Palavras</span>
-        </div>
-      
-        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <span style="font-size: 15px; line-height: 1.5;"> Audiobook 1000 Palavras
-</span>
-        </div>
-      
-        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <span style="font-size: 15px; line-height: 1.5;"> Tradução e Pronúncia
-</span>
-        </div>
-      
-        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <span style="font-size: 15px; line-height: 1.5;">Acesso Imediato</span>
-        </div>
-      
-        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
-          <div style="width: 20px; height: 20px; border-radius: 50%; background-color: #22c55e; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </div>
-          <span style="font-size: 15px; line-height: 1.5;">Acesso Vitalício</span>
-        </div>
-      
-          </div>
-          <a href="https://pay.lowify.com.br/checkout?product_id=PdyvLK" target="_blank" rel="noopener noreferrer"  style="display: block; width: 100%; padding: 16px 24px; background-color: #22c55e; color: #ffffff; font-size: 16px; font-weight: 600; text-align: center; border-radius: 12px; text-decoration: none; box-shadow: 0 4px 14px #22c55e40; animation: pulseBtn 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;">👉 Comprar agora</a>
-        </div>
-<div style="height: 60px;"></div>
-<div style="display: flex; justify-content: center;">
-        <div style="display: flex; align-items: center; justify-content: center; gap: 12px; background-color: #ffffff; color: #1a1a2e; padding: 16px 24px; border-radius: 12px; border: 2px solid #25D366; animation: fadeIn 0.6s ease-out forwards;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 32px; height: 32px; flex-shrink: 0;" />
-          <span style="font-size: 14px; font-weight: 500;">Após a compra, você recebe acesso ao Material completo diretamente no seu WhatsApp</span>
-        </div>
-      </div></div></div>
-        <div class="section" style="position: relative; background-color: #ffffff; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><div style="background-color: #ffffff; padding: 32px; border-radius: 16px; text-align: center; ">
-        <div style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #22c55e20, #22c55e40); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-            <polyline points="9 12 11 14 15 10" stroke="#22c55e" stroke-width="2"></polyline>
-          </svg>
-        </div>
-        <h3 style="font-size: 24px; font-weight: 700; color: #1a1a2e; margin-bottom: 16px;">Garantia de Satisfação</h3>
-        <p style="font-size: 14px; color: #1a1a2e; opacity: 0.8; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;">Se você não ficar satisfeito, devolvemos seu dinheiro.</p>
-        <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-          
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span style="font-size: 14px; color: #1a1a2e;">Sem burocracia</span>
-        </div>
-      
-        <div style="display: flex; align-items: center; gap: 8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span style="font-size: 14px; color: #1a1a2e;">Reembolso total</span>
-        </div>
-      
-        </div>
-      </div>
-<div style="height: 60px;"></div>
-<div style="background-color: #f8f8f8; padding: 24px; border-radius: 16px; animation: fadeIn 0.6s ease-out forwards;">
-        <h3 style="font-size: 24px; font-weight: 700; color: #1a1a1a; margin-bottom: 24px; text-align: center;">Perguntas Frequentes</h3>
-        
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
-          <button onclick="(function(){var c=document.getElementById('faq_wedcc13sy_0');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_wedcc13sy_icon_0');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
-            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Como vou receber o material?</span>
-            <svg id="faq_wedcc13sy_icon_0" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div id="faq_wedcc13sy_0" style="display: none; padding: 0 0 20px 0;">
-            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Após a confirmação do pagamento, você receberá o material em PDF diretamente no seu WhatsApp e e-mail.</p>
-          </div>
-        </div>
-      
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
-          <button onclick="(function(){var c=document.getElementById('faq_wedcc13sy_1');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_wedcc13sy_icon_1');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
-            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">São quantas palavras?</span>
-            <svg id="faq_wedcc13sy_icon_1" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div id="faq_wedcc13sy_1" style="display: none; padding: 0 0 20px 0;">
-            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">São 1000 palavras em inglês, escolhidas por serem as mais usadas no inglês do dia a dia, cada uma com tradução e áudio para ouvir e repetir</p>
-          </div>
-        </div>
-      
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
-          <button onclick="(function(){var c=document.getElementById('faq_wedcc13sy_2');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_wedcc13sy_icon_2');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
-            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Funciona para qualquer pessoa?</span>
-            <svg id="faq_wedcc13sy_icon_2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div id="faq_wedcc13sy_2" style="display: none; padding: 0 0 20px 0;">
-            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Sim. Funciona para qualquer pessoa, inclusive iniciantes e quem já tentou aprender inglês antes e não conseguiu.</p>
-          </div>
-        </div>
-      
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
-          <button onclick="(function(){var c=document.getElementById('faq_wedcc13sy_3');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_wedcc13sy_icon_3');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
-            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Quais formas de pagamento são aceitas?</span>
-            <svg id="faq_wedcc13sy_icon_3" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div id="faq_wedcc13sy_3" style="display: none; padding: 0 0 20px 0;">
-            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Aceitamos PIX e cartão de crédito.</p>
-          </div>
-        </div>
-      
-        <div style="border-bottom: 1px solid rgba(255,255,255,0.1); margin-bottom: 0;">
-          <button onclick="(function(){var c=document.getElementById('faq_wedcc13sy_4');c.style.display=c.style.display==='none'?'block':'none';var i=document.getElementById('faq_wedcc13sy_icon_4');i.style.transform=c.style.display==='none'?'rotate(0deg)':'rotate(180deg)';})();" style="width: 100%; padding: 20px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; text-align: left;">
-            <span style="font-size: 16px; font-weight: 500; color: #1a1a1a;">Tem garantia?</span>
-            <svg id="faq_wedcc13sy_icon_4" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2" style="transition: transform 0.3s; flex-shrink: 0;"><polyline points="6 9 12 15 18 9"></polyline></svg>
-          </button>
-          <div id="faq_wedcc13sy_4" style="display: none; padding: 0 0 20px 0;">
-            <p style="font-size: 14px; color: #1a1a1a; opacity: 0.8; line-height: 1.6; margin: 0;">Sim! Oferecemos garantia de 7 dias. Se não ficar satisfeito, devolvemos 100% do seu dinheiro.</p>
-          </div>
-        </div>
-      
-      </div></div></div>
-        <div class="section" style="position: relative; background-color: #f8f8f8; padding-top: 40px; padding-bottom: 40px; padding-left: 20px; padding-right: 20px; margin-left: calc(-1 * 20px); margin-right: calc(-1 * 20px); width: calc(100% + 2 * 20px);"><div style="position: relative; z-index: 2;"><p style="color: #1a1a1a; font-size: 18px; font-weight: 700; text-align: center; padding: 0 0 8px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.7000000000000001s; opacity: 0;">📩 Precisa de Ajuda?</p>
-<div style="padding: 16px; text-align: center; "><div style="display: flex; align-items: center; gap: 16px; justify-content: center; flex-wrap: wrap;">
-        <a href="https://www.instagram.com/fala.gringoofc" target="_blank" rel="noopener noreferrer" style="width: 40px; height: 40px; border-radius: 50%; background-color: #E4405F; border: none; display: flex; align-items: center; justify-content: center; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/instagram.svg" alt="instagram" style="width: 20px; height: 20px; filter: brightness(0) invert(1);" />
-        </a>
-      </div></div>
-<p style="color: #4a4a4a; font-size: 14px; font-weight: 400; text-align: center; padding: 0 0 24px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.9s; opacity: 0;">Envie um e-mail para contatosuportoficial@gmail.com e nossa equipe responderá rapidamente para ajudá-lo com qualquer dúvida ou problema.</p>
-<p style="color: #888888; font-size: 12px; font-weight: 400; text-align: center; padding: 0; animation: fadeIn 0.6s ease-out forwards; animation-delay: 1s; opacity: 0;">No Fala Gringo, desenvolvemos um método simples e direto para ajudar pessoas comuns a entender inglês de forma prática e sem complicação.
-Nosso compromisso é ensinar apenas o que realmente importa no inglês do dia a dia, usando palavras e áudios que facilitam o aprendizado, mesmo para quem nunca conseguiu aprender antes.</p></div></div>
+            <!-- Hero Section -->
+            <div class="section" style="background-color: #ffffff; padding-top: 40px;">
+                <h2 style="animation: fadeIn 0.6s ease-out forwards;">Entenda o inglês do dia a dia com um método direto
+                    e prático</h2>
+                <p
+                    style="text-align: center; font-weight: 600; padding: 10px; animation: fadeIn 0.6s ease-out forwards; animation-delay: 0.1s;">
+                    🤡 Não caia no golpe das escolas de inglês e não pague por curso, apenas decore essas palavras!</p>
+                <div style="display: flex; justify-content: center; margin: 20px 0;">
+                    <img src="assets/hero.png" alt="Hero" style="width: 100%; height: auto; border-radius: 8px;">
+                </div>
+                <div style="text-align: center;">
+                    <a href="#oferta"
+                        style="background-color: #22c55e; color: #ffffff; font-size: 18px; font-weight: 700; padding: 18px 48px; border-radius: 12px; animation: pulseBtn 2s infinite; display: inline-block; text-decoration: none;">QUERO
+                        APRENDER INGLÊS!</a>
+                </div>
+            </div>
+
+            <!-- Info Section -->
+            <div class="section" style="background-color: #f8f8f8;">
+                <div style="display: flex; justify-content: center;">
+                    <img src="assets/info_text.png" alt="Info" style="width: 110%; height: auto; border-radius: 24px;">
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="section" style="background-color: #f8f9fa;">
+                <h2 style="font-size: 24px;">📦 O QUE VOCÊ VAI RECEBER</h2>
+                <div style="height: 20px;"></div>
+                <div
+                    style="background-color: #ffffff; padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 8px; color: #000000;">📱 Acesso ao Aplicativo Fala Gringo</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Tenha acesso imediato ao app com as 1000 palavras mais
+                        usadas do inglês.</p>
+                </div>
+                <div
+                    style="background-color: #ffffff; padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 8px; color: #000000;">🎧 Áudio de Todas as Palavras</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Cada palavra vem com áudio de pronúncia para você ouvir e
+                        repetir.</p>
+                </div>
+                <div
+                    style="background-color: #ffffff; padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb; margin-bottom: 20px;">
+                    <h3 style="margin-bottom: 8px; color: #000000;">🔤 Tradução Simples e Direta</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">Veja a tradução e entenda como a palavra é usada no dia a
+                        dia.</p>
+                </div>
+                <div style="background-color: #ffffff; padding: 24px; border-radius: 12px; border: 1px solid #e5e7eb;">
+                    <h3 style="margin-bottom: 8px; color: #000000;">⚡ Acesso Vitalício</h3>
+                    <p style="font-size: 14px; opacity: 0.8;">O conteúdo é seu para sempre, sem mensalidades.</p>
+                </div>
+                <p style="text-align: center; margin-top: 20px;">E muito mais...</p>
+            </div>
+
+            <!-- Social Proof Section -->
+            <div class="section" style="background-color: #f8f9fa;">
+                <h2 style="font-size: 24px;">Mais de 500 pessoas já aprovaram!</h2>
+                <p style="text-align: center;">⭐⭐⭐⭐⭐ 4,9/5 de satisfação</p>
+                <div class="carousel">
+                    <img src="assets/test1.jpg" alt="Depoimento 1">
+                    <img src="assets/test2.jpg" alt="Depoimento 2">
+                    <img src="assets/test3.jpg" alt="Depoimento 3">
+                    <img src="assets/test4.jpg" alt="Depoimento 4">
+                    <img src="assets/test5.jpg" alt="Depoimento 5">
+                </div>
+            </div>
+
+            <!-- Offer Section -->
+            <div id="oferta" class="section" style="background-color: #f0f9f4;">
+                <div
+                    style="background-color: #ffffff; padding: 32px; border-radius: 16px; border: 3px solid #22c55e; text-align: center;">
+                    <img src="assets/offer.png"
+                        style="width: 100%; max-width: 250px; margin: 0 auto 20px auto; display: block;">
+                    <h3 style="font-size: 24px; font-weight: 700; color: #000000;">COMPRE AGORA</h3>
+                    <p style="font-size: 20px; text-decoration: line-through; opacity: 0.5;">R$ 67,90</p>
+                    <div style="margin: 10px 0;">
+                        <span style="font-size: 48px; font-weight: 800; color: #22c55e;">R$ 19,90</span>
+                    </div>
+                    <ul style="text-align: left; list-style: none; margin: 20px 0; font-size: 15px; color: #000000;">
+                        <li>✅ Guia 1000 Palavras</li>
+                        <li>✅ Audiobook Completo</li>
+                        <li>✅ Acesso Imediato e Vitalício</li>
+                    </ul>
+                    <a href="https://pay.lowify.com.br/checkout?product_id=PdyvLK"
+                        style="display: block; background-color: #22c55e; color: white; padding: 16px; border-radius: 12px; font-weight: 600; text-decoration: none; animation: pulseBtn 2s infinite;">👉
+                        Comprar agora</a>
+                </div>
+                <!-- WhatsApp Card -->
+                <div
+                    style="background-color: #ffffff; padding: 15px; border-radius: 12px; border: 1px solid #22c55e; margin-top: 20px; display: flex; align-items: center; gap: 15px; text-align: left; max-width: 100%;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
+                        style="width: 40px; height: 40px; flex-shrink: 0;">
+                    <p style="font-size: 14px; font-weight: 500; color: #1a1a1a; margin: 0;">Após a compra, você recebe
+                        acesso ao Material completo diretamente no seu WhatsApp</p>
+                </div>
+            </div>
+
+            <!-- Guarantee Section -->
+            <div class="section" style="background-color: #ffffff;">
+                <div style="text-align: center; max-width: 400px; margin: 0 auto;">
+                    <div
+                        style="width: 80px; height: 80px; background-color: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
+                            stroke="#22c55e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            <path d="m9 12 2 2 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-size: 24px; font-weight: 700; color: #000000; margin-bottom: 10px;">Garantia de
+                        Satisfação</h3>
+                    <p style="color: #4a4a4a; font-size: 16px; margin-bottom: 20px;">Se você não ficar satisfeito,
+                        devolvemos seu dinheiro.</p>
+                    <div
+                        style="display: flex; justify-content: center; gap: 20px; color: #1a1a1a; font-size: 14px; flex-wrap: wrap;">
+                        <span style="display: flex; align-items: center; gap: 5px;"><span
+                                style="color: #22c55e;">✔</span> Sem burocracia</span>
+                        <span style="display: flex; align-items: center; gap: 5px;"><span
+                                style="color: #22c55e;">✔</span> Reembolso total</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="section" style="background-color: #ffffff;">
+                <h3 style="text-align: center; margin-bottom: 20px; color: #000000;">Perguntas Frequentes</h3>
+
+                <div class="faq-item">
+                    <div class="faq-question">Como vou receber o material?</div>
+                    <div class="faq-answer">Após a confirmação do pagamento, você receberá o material em PDF diretamente
+                        no seu WhatsApp e e-mail.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">São quantas palavras?</div>
+                    <div class="faq-answer">São 1000 palavras em inglês, escolhidas por serem as mais usadas no inglês
+                        do dia a dia, cada uma com tradução e áudio para ouvir e repetir</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Funciona para qualquer pessoa?</div>
+                    <div class="faq-answer">Sim. Funciona para qualquer pessoa, inclusive iniciantes e quem já tentou
+                        aprender inglês antes e não conseguiu.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Quais formas de pagamento são aceitas?</div>
+                    <div class="faq-answer">Aceitamos PIX e cartão de crédito.</div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">Tem garantia?</div>
+                    <div class="faq-answer">Sim! Oferecemos garantia de 7 dias. Se não ficar satisfeito, devolvemos 100%
+                        do seu dinheiro.</div>
+                </div>
+            </div>
+
+            <script>
+                document.querySelectorAll('.faq-question').forEach(item => {
+                    item.addEventListener('click', event => {
+                        const parent = item.parentNode;
+                        parent.classList.toggle('active');
+                    })
+                })
+            </script>
+
+            <!-- Footer -->
+            <!-- Footer -->
+            <div class="section"
+                style="text-align: center; padding-bottom: 40px; border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px;">
+                <p style="font-size: 12px; margin-bottom: 5px;">Contato: contatosuportoficial@gmail.com</p>
+                <p style="font-size: 12px;">Todos os direitos reservados - Fala Gringo</p>
+                <p style="font-size: 10px; opacity: 0.5; margin-top: 10px;">Este site não é afiliado ao Facebook ou a
+                    qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e
+                    sim do nosso site. Fazemos todos os esforços para indicar claramente e mostrar todas as provas do
+                    produto e usamos resultados reais.</p>
+            </div>
         </div>
     </div>
-    
-    
 </body>
+
 </html>
